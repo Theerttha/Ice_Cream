@@ -27,12 +27,11 @@ def linear_regression(X,Y):
     clf.fit(X_train, Y_train)
     prediction=clf.predict(X_test)
     score=clf.score(X_test,Y_test)
-    print(score)
+    print("score: ",score)
     return X_test,Y_test,prediction
 def plot_prediction(x,y,prediction):
     pt.xlabel("Temperature in \u00b0C")
     pt.ylabel("Revenue in $")
-    print(len(x))
     pt.scatter(x,y,color="#89BAC1",label="Actual")
     pt.scatter(x,prediction,color="#346E43", label="Predicted")
     pt.legend(loc="right")
